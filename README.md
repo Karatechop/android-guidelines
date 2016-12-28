@@ -192,12 +192,13 @@ class MyClass {
 }
 ```
 
-Braces around the statements are required unless the condition and the body fit on one line.
-
-If the condition and the body fit on one line and that line is shorter than the max line length, then braces are not required, e.g.
+Braces around the if statements are always required for clarity, even if the statement is single line.
+This is good:
 
 ```java
-if (condition) body();
+if (condition) {
+    body();
+}
 ```
 
 This is __bad__:
@@ -205,6 +206,11 @@ This is __bad__:
 ```java
 if (condition)
     body();  // bad!
+```
+
+Or
+```java
+if (condition)  body();  // bad!
 ```
 
 ### 2.2.6 Annotations
